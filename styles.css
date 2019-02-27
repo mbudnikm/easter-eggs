@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin-top: 3em;
+    /*background-color: rgba(80, 33, 62, 0.534);*/
+    background-color: #f4cae0;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px;
+    color: #54424b;
+    text-shadow: 4px 0px 0px white;
+    margin-bottom: 35px;
+}
+
+.eggs{
+    margin: 1em auto;
+}
+
+.egg{
+    width: 140px;
+    height: 200px;
+    margin: 1em auto;
+    background: #FBE9E7;
+
+    border-radius: 50%/60% 60% 40% 40%;
+    display: inline-block;
+    overflow: hidden;
+   /* grid-template-rows: repeat(5, 20%);*/
+  }
+
+.stripe{
+    height: 20%;
+}
+
+.stripe:not(:first-child) {
+    border-top: 2px solid #ffffff;
+  }
+
+.stripe:nth-child(1) {
+    background-color: coral;
+}
+
+.stripe:nth-child(2) {
+    background-color: rgb(174, 81, 228);
+}
+
+.stripe:nth-child(3) {
+    background-color: rgb(97, 217, 247);
+}
+
+.stripe:nth-child(4) {
+    background-color: rgb(255, 80, 153);
+}
+
+.stripe:nth-child(5) {
+    background-color: rgb(95, 255, 80);
+}
+
+@-webkit-keyframes egg-left-animation {
+    0% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+  
+  @keyframes egg-left-animation {
+    0% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+  @-webkit-keyframes egg-right-animation {
+    0% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(25deg);
+    }
+  }
+  
+  @keyframes egg-right-animation {
+    0% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(25deg);
+    }
+  }
+  
+.egg-left {
+    transform: rotate(-10deg);
+    animation: egg-left-animation 0.9s linear 0s infinite alternate;
+}
+
+.egg-right {
+    background-image: url(congruent_pentagon.png);/* from https://www.toptal.com */
+    transform: rotate(25deg);
+    animation: egg-right-animation 0.6s linear 0s infinite alternate;
+}
+
